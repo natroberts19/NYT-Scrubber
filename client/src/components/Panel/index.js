@@ -1,5 +1,7 @@
 import React from 'react';
-import "./style.css";
+import Search from "../Search";
+import Results from "../Results";
+import Saved from "../Saved";
 
 // gather other componets
 //import otherComponent from "../otherComponent";

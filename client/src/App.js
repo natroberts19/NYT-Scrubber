@@ -7,6 +7,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 
+
 class App extends Component {
   state = {
     username: "",
@@ -116,6 +117,8 @@ class App extends Component {
           } 
         }
         }/>
+
+        
         </div>
       </Router>
     );

@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 const SignIn = (props)=> {
 
 	return (
-		<div>
-			<h1>SIGN IN</h1>
+		<div className="container">
+			<h1>Sign In</h1>
 			<Link to = "/signup" >Go to sign up</Link>
 			<form>
 				<label>Email</label><br/>
@@ -15,7 +15,7 @@ const SignIn = (props)=> {
 				<label>Password</label><br/>
 				<input name='password' type='password' value = {props.password} onChange = {props.handleChange} />
 				<br />
-				<button type = 'submit' name = "/auth/signin" onClick = {props.handleSubmit}>Sign In</button>
+				<button type = 'submit' className="btn btn-default" name = "/auth/signin" onClick = {props.handleSubmit}>Sign In</button>
 			</form>
 		</div>
 	);

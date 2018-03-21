@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 
 const SignUp = (props)=> {
 	return (
-		<div>
-			<h1>SIGN UP</h1>
+		<div class="container" style={{'background-color': 'ightgray'}}>
+			<h1>Sign Up - It's Free!</h1>
 			<Link to = "/" >Go to sign in</Link>
 			<form>
 				<label>Email</label><br/>
@@ -14,7 +14,7 @@ const SignUp = (props)=> {
 				<label>Password</label><br/>
 				<input name='password' type='password' value = {props.password} onChange = {props.handleChange} />
 				<br />
-				<button type = 'submit' name = "/auth/signup" onClick = {props.handleSubmit}>Sign Up</button>
+				<button type = 'submit' className="btn btn-default" name = "/auth/signup" onClick = {props.handleSubmit}>Sign Up</button>
 			</form>
 		</div>
 	);
