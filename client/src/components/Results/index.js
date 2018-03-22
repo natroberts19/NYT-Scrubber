@@ -2,8 +2,6 @@ import React from 'react';
 import "./style.css";
 import Table from "../Table";
 
-// gather other componets
-//import otherComponent from "../otherComponent";
 
 const Results = (props) => {
 	return(
@@ -16,7 +14,10 @@ const Results = (props) => {
 							<h3 className="panel-title"><strong><i className="fa fa-table"></i>  Top Articles</strong></h3>
 						</div>
 
-						<Table tableHeading = "Save" />
+						<Table tableHeading = "Save" /> 
+						
+						
+	
 					
 					</div>
 				</div>

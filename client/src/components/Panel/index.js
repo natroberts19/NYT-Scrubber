@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from "../Search";
-import Results from "../Results";
+// import Results from "../Results";
 import Saved from "../Saved";
 
 // gather other componets

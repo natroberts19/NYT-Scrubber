@@ -1,10 +1,10 @@
 // Require mongoose
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 // Get a reference to the mongoose Schema constructor.
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var ArticleSchema = new Schema({
+const ArticleSchema = new Schema({
   title: {
     type: String,
     trim: true,
@@ -23,7 +23,7 @@ var ArticleSchema = new Schema({
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Article = mongoose.model("Article", ArticleSchema);
+const Article = mongoose.model("Article", ArticleSchema);
 
 // Export the Example model
 module.exports = Article;

@@ -6,6 +6,7 @@ import axios from 'axios';
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
+// import SearchResults from "./components/SearchResults";
 
 
 class App extends Component {

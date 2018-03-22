@@ -10,7 +10,7 @@ const Search = (props) => {
 
       <div className="form-group">
           <label for="topic">Topic:</label>
-          <input type="text" className="form-control" id="search-term" />
+          <input onChange={props.handleInputChange} value={props.search} type="text" className="form-control" id="search-term"  />
       </div>
 
       <div className="form-group">
@@ -24,15 +24,15 @@ const Search = (props) => {
 
       <div className="form-group">
             <label for="start-year">Start Year (Optional):</label>
-              <input type="text" class="form-control" id="start-year" />
+              <input onChange={props.handleInputChange} value={props.search} type="text" class="form-control" id="start-year" />
       </div>
 
       <div className="form-group">
             <label for="end-year">End Year (Optional):</label>
-              <input type="text" className="form-control" id="end-year" />
+              <input onChange={props.handleInputChange} value={props.search} type="text" className="form-control" id="end-year" />
       </div>
 
-      <button type="submit" className="btn btn-default" id="run-search">Search</button>
+      <button onClick={props.handleFormSubmit} type="submit" className="btn btn-default" id="run-search">Search</button>
 
     </form>
     <p />

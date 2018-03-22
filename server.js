@@ -22,6 +22,8 @@ require('./config/passport.js')(passport,models.User);
 // Add routes, both API and view
 const routes = require("./routes")(passport);
 app.use('/',routes);
+// app.use('/:id',routes);
+// app.use('/:id',routes);
 
 
 // Set up promises with mongoose

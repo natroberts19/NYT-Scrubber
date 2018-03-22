@@ -1,24 +1,12 @@
 import axios from "axios";
 
-// Export an object containing methods we'll use for accessing the Dog.Ceo API
+const BASEURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=b9f91d369ff59547cd47b931d8cbc56b:0:74623931&q=";
 
+// Export an object with a "search" method that searches the NYT API for the passed query
 export default {
-    // Gets all articles.
-    getArticles: function() {
-        return axios.get("/api/articles");
-    },
-    // Gets the article with the given id.
-    getArticle: function(id) {
-        return axios.get("/api/articles/" + id);
-    },
-    // Deletes the article with the given id.
-    deleteArticle: function(id) {
-        return axios.delete("/api/articles/" + id);
-    },
-    // Saves a article to the database.
-    saveArticle: function(bookData) {
-        return axios.post("/api/articles", articleData);
-    }
+  search: function(query) {
+    return axios.get(BASEURL + query);
+  }
 };
 
 // ===========================================

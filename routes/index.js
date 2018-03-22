@@ -4,13 +4,12 @@ module.exports = function (passport) {
 
 
 	router.use("/auth",require("./authRoutes.js")(passport));
-	router.use("/api",require("./apiRoutes.js")(passport));
-	//add more routes here
-	
+	// router.use("/api",require("./apiRoutes.js")(app));
 
-	// If no API routes are hit, send the React app
+
+	// If no API routes are hit, send the React app here:
 	router.use(function(req, res) {
-	  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+	  res.sendFile(path.join(__dirname, "../client/index.html"));
 	});
 
 	return router;
