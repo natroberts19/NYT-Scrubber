@@ -5,7 +5,7 @@ module.exports = function (passport) {
 
 
 	//add any API routes here. * THESE ARE NOT WORKING *
-	// const articleController = require("../controllers/article");
+	const articleController = require("../controllers/article");
 
 
 	// GET route to load the single React HTML page.

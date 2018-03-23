@@ -1,10 +1,10 @@
 import React from 'react';
-import "./style.css";
+// import "./style.css";
 import {Link} from 'react-router-dom';
 
 const SignUp = (props)=> {
 	return (
-		<div class="container" style={{'background-color': 'ightgray'}}>
+		<div className="container" style={{'backgroundColor': 'lightgreen'}}>
 			<h1>Sign Up - It's Free!</h1>
 			<Link to = "/" >Go to sign in</Link>
 			<form>

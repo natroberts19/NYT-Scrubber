@@ -1,11 +1,11 @@
 import React from 'react';
-import "./style.css";
+// import "./style.css";
 import {Link} from 'react-router-dom';
 
 const SignIn = (props)=> {
 
 	return (
-		<div className="container">
+		<div className="container" style={{'backgroundColor': 'lightgreen'}}>
 			<h1>Sign In</h1>
 			<Link to = "/signup" >Go to sign up</Link>
 			<form>

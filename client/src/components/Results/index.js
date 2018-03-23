@@ -1,5 +1,4 @@
 import React from 'react';
-import "./style.css";
 import Table from "../Table";
 
 
@@ -17,8 +16,6 @@ const Results = (props) => {
 						<Table tableHeading = "Save" /> 
 						
 						
-	
-					
 					</div>
 				</div>
 			</div>

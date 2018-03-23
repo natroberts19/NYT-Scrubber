@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./style.css";
 import Search from "./Search";
-// import Results from "./Results";
+import ArticleDetail from "./ArticleDetail";
+import Results from "./Results";
 import API from "../utils/API";
 
 class SearchResults extends Component {
@@ -10,14 +10,14 @@ class SearchResults extends Component {
     results: []
   };
 
-  // When this component mounts, search the NYT API for articles about weather.
+  // When this component mounts, search the NYT API for articles about weather as a default.
   componentDidMount() {
     this.searchNYT("weather");
   }
 
   searchNYT = query => {
     API.search(query)
-      .then(res => this.setState({ results: res.data.data }))
+      .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
   };
 
@@ -39,15 +39,25 @@ class SearchResults extends Component {
     return (
       <div>
         <Search
-          search={this.state.search}
+          value={this.state.value}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <Results results={this.state.results} />
+        <Results results={this.state.results} 
+        
+        {...state.result.Title
+          ? <ArticleDetail 
+              title={this.state.result.Title}
+              date={this.state.result.Date}
+              url={this.state.result.URL}
+              save={this.state.result.Save}
+            />
+          : <h3>No Results to Display</h3>}
+          />
+          
       </div>
     );
   }
 }
-
 
 export default SearchResults;
