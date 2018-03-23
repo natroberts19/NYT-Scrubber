@@ -11,7 +11,7 @@ module.exports = function (passport) {
 	// GET route to load the single React HTML page.
 
 	// GET route to QUERY MongoDB for all saved articles.
-	// router.findAll("/", articleController.findAll);
+	router.findAll("/", articleController.findAll);
 	// POST route to DELETE a saved article from the database.
 	// router.delete("/:id", articleController.remove);
 	// POST route to SAVE an article to the database.
