@@ -6,6 +6,7 @@ var db = require("../models");
 module.exports = {
   // Find all headlines, sort them by date, send them back to the user
       findAll: function(req, res) {
+          console.log(req.query);
         db.Article
           .find(req.query)
           .sort({ date: -1 })
