@@ -16,13 +16,13 @@ class Home extends Component {
 	};
 
 	// When this component mounts, search the NYT API for articles about weather as a default.
-	// componentDidMount() {
-	// 	API.search("weather", "2017", "2018")
-	// 		.then( data => this.setState({articles: data.data.response.docs}) )
-	// 		.catch(err => console.log(err));
-	// }
+	componentDidMount() {
+		API.search("weather", "2017", "2018")
+			.then( data => this.setState({articles: data.data.response.docs}) )
+			.catch(err => console.log(err));
+	}
 
-	handleTopicChange = (event) => {
+	handleInputChange = (event) => {
 		const {name, value} = event.target;    
         // Set the state for the appropriate input field
 		this.setState({
@@ -30,21 +30,21 @@ class Home extends Component {
 		});
 	}
 	
-	handleStartYearChange = (event) => {
-		const {name, value} = event.target;    
-        // Set the state for the appropriate input field
-		this.setState({
-		[name]: value
-		});
-	}
+	// handleStartYearChange = (event) => {
+	// 	const {name, value} = event.target;    
+    //     // Set the state for the appropriate input field
+	// 	this.setState({
+	// 	[name]: value
+	// 	});
+	// }
 
-	handleEndYearChange = (event) => {
-		const {name, value} = event.target;    
-        // Set the state for the appropriate input field
-		this.setState({
-		[name]: value
-		});
-    }
+	// handleEndYearChange = (event) => {
+	// 	const {name, value} = event.target;    
+    //     // Set the state for the appropriate input field
+	// 	this.setState({
+	// 	[name]: value
+	// 	});
+    // }
 
 	// Search for articles.
 	handleFormSubmit = event => {
@@ -66,9 +66,7 @@ class Home extends Component {
 					<h1 className="text-center"><strong><i className="fa fa-newspaper-o"></i>  New York Times Search</strong></h1>	
 			</div>	
 				<Search 
-				handleTopicChange={this.handleTopicChange}
-				handleStartYearChange={this.handleStartYearChange}
-				handleEndYearChange={this.handleEndYearChange}
+				handleInputChange={this.handleInputChange}
 				handleFormSubmit={this.handleFormSubmit}
 				/>
 
