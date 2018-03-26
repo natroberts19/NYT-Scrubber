@@ -24,27 +24,11 @@ class Home extends Component {
 
 	handleInputChange = (event) => {
 		const {name, value} = event.target;    
-        // Set the state for the appropriate input field
+        // Set the state for the appropriate input field.
 		this.setState({
 		[name]: value
 		});
 	}
-	
-	// handleStartYearChange = (event) => {
-	// 	const {name, value} = event.target;    
-    //     // Set the state for the appropriate input field
-	// 	this.setState({
-	// 	[name]: value
-	// 	});
-	// }
-
-	// handleEndYearChange = (event) => {
-	// 	const {name, value} = event.target;    
-    //     // Set the state for the appropriate input field
-	// 	this.setState({
-	// 	[name]: value
-	// 	});
-    // }
 
 	// Search for articles.
 	handleFormSubmit = event => {
