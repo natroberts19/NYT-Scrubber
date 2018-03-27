@@ -10,12 +10,10 @@ module.exports = function (passport) {
 			.get(articleController.findAll);
 			
 	// GET and POST routes to DELETE and SAVE articles from the database.
-		router.route("/:id")
-			.get(articleController.findbyId)
-			.put(articleController.update)
-			.delete(articleController.remove);
-		
-	module.exports = router;
+		// router.route("/:id")
+		// 	.get(articleController.findbyId)
+		// 	.put(articleController.update)
+		// 	.delete(articleController.remove);
 
 	return router;
 };

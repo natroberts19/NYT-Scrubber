@@ -1,11 +1,11 @@
 module.exports = function (passport) {
 	const path = require("path");
 	const router = require('express').Router();
-	const apiRoutes = require("./apiRoutes.js");
-
-
+	// CALL the apiRoutes function here:
+	const apiRoutes = require("./apiRoutes.js")();
+	//or, if you want to be able to lock down your apiRoutes. Remember this for final proj!
 	router.use("/auth",require("./authRoutes.js")(passport));
-	router.use("/api", apiRoutes);
+	router.use("/api",require("./apiRoutes.js")(passport));
 
 
 	// GET route to load the single React HTML page. If no API routes are hit, send the React app here:
