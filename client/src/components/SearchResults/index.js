@@ -2,7 +2,6 @@ import React from "react";
 import ArticleDetail from "../ArticleDetail";
 
 const SearchResults = (props) => {
-    console.log(props.articles);
     return (
       <table className="table">
           <thead>

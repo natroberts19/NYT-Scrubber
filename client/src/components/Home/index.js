@@ -7,13 +7,8 @@ import API from "../../utils/API";
 class Home extends Component {
 	state = {
 		articles: [],
-		search: {
-			topic: "",
-			startYear: "",
-			endYear: "",
 		saved: []
-		}
-	};
+	}
 
 	// When this component mounts, search the NYT API for articles about weather as a default.
 	componentDidMount() {
@@ -22,20 +17,12 @@ class Home extends Component {
 			.catch(err => console.log(err));
 	}
 
-	handleInputChange = (event) => {
-		const {name, value} = event.target;    
-        // Set the state for the appropriate input field.
-		this.setState({
-		[name]: value
-		});
-	}
-
 	// Search for articles.
-	handleFormSubmit = event => {
+	handleFormSubmit = (event, topic, startYear, endYear) => {
 		event.preventDefault();
 		
 		// Call the API search.
-		API.search(this.state.topic, this.state.startYear, this.state.endYear)
+		API.search(topic, startYear, endYear)
 			.then( data => this.setState({articles: data.data.response.docs}) )
 			.catch(err => console.log(err));
 	};
@@ -50,8 +37,8 @@ class Home extends Component {
 					<h1 className="text-center"><strong><i className="fa fa-newspaper-o"></i>  New York Times Search</strong></h1>	
 			</div>	
 				<Search 
-				handleInputChange={this.handleInputChange}
-				handleFormSubmit={this.handleFormSubmit}
+					handleInputChange={this.handleInputChange}
+					handleFormSubmit={this.handleFormSubmit}
 				/>
 
 				<SearchResults articles={this.state.articles} />	
